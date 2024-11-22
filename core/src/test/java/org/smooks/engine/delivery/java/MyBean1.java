@@ -42,13 +42,21 @@
  */
 package org.smooks.engine.delivery.java;
 
+import org.smooks.engine.resource.reader.FieldOrder;
+import org.smooks.engine.resource.reader.OrderedClass;
+
 /**
  * @author <a href="mailto:tom.fennelly@gmail.com">tom.fennelly@gmail.com</a>
  */
+@OrderedClass
 public class MyBean1 {
+    @FieldOrder(order = 1)
     private boolean prop1 = true;
+    @FieldOrder(order = 2)
     private String prop2 = "hello";
+    @FieldOrder(order = 3)
     private long prop3 = 1111L;
+    @FieldOrder(order = 4)
     private MyBean2 mybean2 = new MyBean2();
 
     public boolean isProp1() {

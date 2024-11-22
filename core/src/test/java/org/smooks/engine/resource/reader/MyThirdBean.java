@@ -1,8 +1,8 @@
 /*-
  * ========================LICENSE_START=================================
- * Core
+ * Smooks Core
  * %%
- * Copyright (C) 2020 Smooks
+ * Copyright (C) 2020 - 2024 Smooks
  * %%
  * Licensed under the terms of the Apache License Version 2.0, or
  * the GNU Lesser General Public License version 3.0 or later.
@@ -40,34 +40,40 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * =========================LICENSE_END==================================
  */
-package org.smooks.engine.delivery.java;
+package org.smooks.engine.resource.reader;
 
-import org.smooks.engine.resource.reader.FieldOrder;
-import org.smooks.engine.resource.reader.OrderedClass;
-
-/**
- * @author <a href="mailto:tom.fennelly@gmail.com">tom.fennelly@gmail.com</a>
- */
 @OrderedClass
-public class MyBean2 {
+public class MyThirdBean {
     @FieldOrder(order = 1)
-    private boolean prop5 = true;
+    private Float a;
+
     @FieldOrder(order = 2)
-    private String prop6 = "hello";
+    private Long d;
 
-    public boolean isProp5() {
-        return prop5;
+    @FieldOrder(order = 3)
+    private Boolean f;
+
+    public Float getA() {
+        return a;
     }
 
-    public void setProp5(boolean prop5) {
-        this.prop5 = prop5;
+    public void setA(Float a) {
+        this.a = a;
     }
 
-    public String getProp6() {
-        return prop6;
+    public Long getD() {
+        return d;
     }
 
-    public void setProp6(String prop6) {
-        this.prop6 = prop6;
+    public void setD(Long d) {
+        this.d = d;
+    }
+
+    public Boolean getF() {
+        return f;
+    }
+
+    public void setF(Boolean f) {
+        this.f = f;
     }
 }

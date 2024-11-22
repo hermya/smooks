@@ -1,8 +1,8 @@
 /*-
  * ========================LICENSE_START=================================
- * Core
+ * Smooks Core
  * %%
- * Copyright (C) 2020 Smooks
+ * Copyright (C) 2020 - 2024 Smooks
  * %%
  * Licensed under the terms of the Apache License Version 2.0, or
  * the GNU Lesser General Public License version 3.0 or later.
@@ -40,34 +40,8 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * =========================LICENSE_END==================================
  */
-package org.smooks.engine.delivery.java;
+package org.smooks.engine.resource.reader;
 
-import org.smooks.engine.resource.reader.FieldOrder;
-import org.smooks.engine.resource.reader.OrderedClass;
-
-/**
- * @author <a href="mailto:tom.fennelly@gmail.com">tom.fennelly@gmail.com</a>
- */
 @OrderedClass
-public class MyBean2 {
-    @FieldOrder(order = 1)
-    private boolean prop5 = true;
-    @FieldOrder(order = 2)
-    private String prop6 = "hello";
-
-    public boolean isProp5() {
-        return prop5;
-    }
-
-    public void setProp5(boolean prop5) {
-        this.prop5 = prop5;
-    }
-
-    public String getProp6() {
-        return prop6;
-    }
-
-    public void setProp6(String prop6) {
-        this.prop6 = prop6;
-    }
+public class MyFifthBean {
 }

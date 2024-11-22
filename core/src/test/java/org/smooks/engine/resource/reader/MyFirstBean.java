@@ -1,8 +1,8 @@
 /*-
  * ========================LICENSE_START=================================
- * Core
+ * Smooks Core
  * %%
- * Copyright (C) 2020 Smooks
+ * Copyright (C) 2020 - 2024 Smooks
  * %%
  * Licensed under the terms of the Apache License Version 2.0, or
  * the GNU Lesser General Public License version 3.0 or later.
@@ -40,34 +40,71 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * =========================LICENSE_END==================================
  */
-package org.smooks.engine.delivery.java;
+package org.smooks.engine.resource.reader;
 
-import org.smooks.engine.resource.reader.FieldOrder;
-import org.smooks.engine.resource.reader.OrderedClass;
+import java.util.List;
+import java.util.Map;
 
-/**
- * @author <a href="mailto:tom.fennelly@gmail.com">tom.fennelly@gmail.com</a>
- */
 @OrderedClass
-public class MyBean2 {
+public class MyFirstBean {
     @FieldOrder(order = 1)
-    private boolean prop5 = true;
+    private Integer a;
     @FieldOrder(order = 2)
-    private String prop6 = "hello";
+    private Integer b;
+    @FieldOrder(order = 3)
+    private Boolean c;
+    @FieldOrder(order = 4)
+    private MySecondBean d;
+    @FieldOrder(order = 5)
+    private Map<String, MyFourthBean> e;
+    @FieldOrder(order = 6)
+    private List<List<MyFifthBean>> f;
 
-    public boolean isProp5() {
-        return prop5;
+    public Integer getA() {
+        return a;
     }
 
-    public void setProp5(boolean prop5) {
-        this.prop5 = prop5;
+    public void setA(Integer a) {
+        this.a = a;
     }
 
-    public String getProp6() {
-        return prop6;
+    public Integer getB() {
+        return b;
     }
 
-    public void setProp6(String prop6) {
-        this.prop6 = prop6;
+    public void setB(Integer b) {
+        this.b = b;
+    }
+
+    public Boolean getC() {
+        return c;
+    }
+
+    public void setC(Boolean c) {
+        this.c = c;
+    }
+
+    public MySecondBean getD() {
+        return d;
+    }
+
+    public void setD(MySecondBean d) {
+        this.d = d;
+    }
+
+    public Map<String, MyFourthBean> getE() {
+        return e;
+    }
+
+    public void setE(Map<String, MyFourthBean> e) {
+        this.e = e;
+    }
+
+    public List<List<MyFifthBean>> getF() {
+        return f;
+    }
+
+    public void setF(List<List<MyFifthBean>> f) {
+        this.f = f;
     }
 }
